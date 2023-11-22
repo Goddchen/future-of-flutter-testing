@@ -11,6 +11,6 @@ class TitleSlide extends FlutterDeckSlideWidget {
 
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.title(
-        title: 'Flutter Packages A-Z',
+        title: 'The future of Flutter testing',
       );
 }
