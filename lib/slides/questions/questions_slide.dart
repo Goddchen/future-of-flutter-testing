@@ -30,7 +30,8 @@ class QuestionsSlide extends FlutterDeckSlideWidget {
                       'https://github.com/Goddchen/future-of-flutter-testing',
                     ),
                     QrImageView(
-                      data: 'https://github.com/Goddchen/future-of-flutter-testing',
+                      data:
+                          'https://github.com/Goddchen/future-of-flutter-testing',
                       size: 200,
                     ),
                   ],
