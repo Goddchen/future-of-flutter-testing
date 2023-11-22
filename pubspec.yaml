@@ -1,0 +1,30 @@
+name: future_of_flutter_testing
+description: Future of Flutter testing.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  flutter: ">=3.16.0 <4.0.0"
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_deck: ^0.8.0
+  get_it: ^7.6.4
+  package_info_plus: ^5.0.1
+  qr_flutter: ^4.1.0
+  url_launcher: ^6.1.14
+
+dev_dependencies:
+  build_runner: ^2.4.6
+  flutter_gen_runner: ^5.3.2
+  flutter_lints: ^3.0.1
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^5.1.0
+
+flutter:
+  assets:
+    - assets/
+  uses-material-design: true

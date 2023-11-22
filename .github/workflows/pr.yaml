@@ -1,0 +1,29 @@
+jobs:
+  build_and_deploy:
+    needs: flutter_package
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          cache: true
+          flutter-version: "3.16.0"
+      - run: flutter build web
+      - run: cp -r build/web/assets/packages build/web/packages
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FUTURE_OF_FLUTTER_TESTING }}"
+          projectId: future-of-flutter-testing
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          target: future-of-flutter-testing-dev
+  flutter_package:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    with:
+      flutter_version: "3.16.0"
+      min_coverage: 0
+      runs_on: "ubuntu-22.04"
+  semantic_pull_request:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+name: Pull Requests
+on: pull_request

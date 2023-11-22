@@ -1,0 +1,24 @@
+name: Deploy to Firebase Hosting
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          cache: true
+          flutter-version: "3.16.0"
+      - run: flutter build web
+      - run: cp -r build/web/assets/packages build/web/packages
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          channelId: live
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FUTURE_OF_FLUTTER_TESTING }}"
+          projectId: future-of-flutter-testing
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          target: future-of-flutter-testing-dev
