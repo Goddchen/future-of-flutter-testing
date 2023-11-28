@@ -5,6 +5,8 @@ import 'package:future_of_flutter_testing/gen/assets.gen.dart';
 import 'package:future_of_flutter_testing/services/navigation_service.dart';
 import 'package:future_of_flutter_testing/slides/questions/questions_slide.dart';
 import 'package:future_of_flutter_testing/slides/title/title_slide.dart';
+import 'package:future_of_flutter_testing/slides/why_testing/why_testing_regression_bugs_slide.dart';
+import 'package:future_of_flutter_testing/slides/why_testing/why_testing_title_slide.dart';
 import 'package:get_it/get_it.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -26,6 +28,9 @@ void main() async {
       ),
       slides: const <FlutterDeckSlideWidget>[
         TitleSlide(),
+        WhyTestingTitleSlide(),
+        WhyTestingRegressionBugsSlide1(),
+        WhyTestingRegressionBugsSlide2(),
         QuestionsSlide(),
       ],
     ),
