@@ -8,9 +8,11 @@ environment:
   sdk: ">=3.2.0 <4.0.0"
 
 dependencies:
+  cross_file: ^0.3.3+8
   flutter:
     sdk: flutter
   flutter_deck: ^0.8.0
+  fpdart: ^1.1.0
   get_it: ^7.6.4
   package_info_plus: ^5.0.1
   qr_flutter: ^4.1.0
@@ -22,6 +24,7 @@ dev_dependencies:
   flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
+  test: ^1.24.9
   very_good_analysis: ^5.1.0
 
 flutter:

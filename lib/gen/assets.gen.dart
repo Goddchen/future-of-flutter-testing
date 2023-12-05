@@ -15,9 +15,10 @@ class Assets {
   static const AssetGenImage avatar = AssetGenImage('assets/avatar.jpeg');
   static const AssetGenImage dashQuestions =
       AssetGenImage('assets/dash-questions.png');
+  static const String runTest = 'assets/run_test.dart';
 
   /// List of all assets
-  List<AssetGenImage> get values => [avatar, dashQuestions];
+  List<dynamic> get values => [avatar, dashQuestions, runTest];
 }
 
 class AssetGenImage {
