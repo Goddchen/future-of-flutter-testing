@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:future_of_flutter_testing/common/async_value.dart';
@@ -21,6 +22,14 @@ class CodeRunWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (kIsWeb) {
+      return Center(
+        child: Text(
+          'Live execution not available on web',
+          style: FlutterDeckTheme.of(context).textTheme.bodyMedium,
+        ),
+      );
+    }
     final ValueNotifier<AsyncValue<String>> processOutput =
         ValueNotifier<AsyncValue<String>>(AsyncValueData<String>(data: ''));
     return Column(

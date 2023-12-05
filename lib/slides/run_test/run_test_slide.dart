@@ -1,5 +1,4 @@
-import 'dart:io';
-
+import 'package:cross_file/cross_file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:future_of_flutter_testing/common/code_run_widget.dart';
@@ -15,9 +14,13 @@ class RunTestSlide extends FlutterDeckSlideWidget {
 
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.split(
-        leftBuilder: (_) => FlutterDeckCodeHighlight(
-          code: File(Assets.runTest).readAsStringSync(),
-          fileName: 'run_test.dart',
+        leftBuilder: (_) => FutureBuilder<String>(
+          future: XFile(Assets.runTest).readAsString(),
+          builder: (_, AsyncSnapshot<String> snapshot) =>
+              FlutterDeckCodeHighlight(
+            code: snapshot.data ?? 'Loading...',
+            fileName: 'run_test.dart',
+          ),
         ),
         rightBuilder: (_) => const CodeRunWidget(
           codeType: CodeType.test,
