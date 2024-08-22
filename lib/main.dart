@@ -17,6 +17,30 @@ void main() async {
   runApp(
     FlutterDeckApp(
       configuration: const FlutterDeckConfiguration(
+        background: FlutterDeckBackgroundConfiguration(
+          dark: FlutterDeckBackground.gradient(
+            LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Color.fromARGB(255, 4, 43, 89),
+                Color.fromARGB(255, 5, 83, 177),
+              ],
+              stops: <double>[0.8, 1],
+            ),
+          ),
+          light: FlutterDeckBackground.gradient(
+            LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Color.fromARGB(255, 2, 125, 253),
+                Color.fromARGB(255, 5, 83, 177),
+              ],
+              stops: <double>[0.7, 1],
+            ),
+          ),
+        ),
         footer: FlutterDeckFooterConfiguration(
           widget: _CustomFooter(),
         ),
