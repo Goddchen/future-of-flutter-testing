@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:future_of_flutter_testing/gen/assets.gen.dart';
 import 'package:future_of_flutter_testing/services/navigation_service.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_infos.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_intro.dart';
 import 'package:future_of_flutter_testing/slides/questions/questions_slide.dart';
 import 'package:future_of_flutter_testing/slides/run_test/run_test_slide.dart';
 import 'package:future_of_flutter_testing/slides/title/title_slide.dart';
@@ -33,6 +35,8 @@ void main() async {
         WhyTestingTitleSlide(),
         WhyTestingRegressionBugsSlide1(),
         WhyTestingRegressionBugsSlide2(),
+        ChecksIntroSlide(),
+        ChecksInfosSlide(),
         QuestionsSlide(),
       ],
     ),
