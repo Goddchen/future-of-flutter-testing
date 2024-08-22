@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_deck/flutter_deck.dart';
-import 'package:future_of_flutter_testing/widgets/package_badge.dart';
 
 class ChecksIntroSlide extends FlutterDeckSlideWidget {
   const ChecksIntroSlide()
