@@ -8,9 +8,10 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           cache: true
-          flutter-version: "3.16.0"
+          flutter-version: "3.22.3"
       - run: flutter build web
       - run: cp -r build/web/assets/packages build/web/packages
+      - run: cp -r build/web/assets/assets/* build/web/assets
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FUTURE_OF_FLUTTER_TESTING }}"
@@ -20,7 +21,7 @@ jobs:
   flutter_package:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     with:
-      flutter_version: "3.16.0"
+      flutter_version: "3.22.3"
       min_coverage: 0
       runs_on: "ubuntu-22.04"
   semantic_pull_request:
