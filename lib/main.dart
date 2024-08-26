@@ -5,6 +5,8 @@ import 'package:future_of_flutter_testing/gen/assets.gen.dart';
 import 'package:future_of_flutter_testing/services/navigation_service.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_infos_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_intro_slide.dart';
+import 'package:future_of_flutter_testing/slides/matching/matching_example_slide.dart';
+import 'package:future_of_flutter_testing/slides/matching/matching_slide.dart';
 import 'package:future_of_flutter_testing/slides/questions/questions_slide.dart';
 import 'package:future_of_flutter_testing/slides/run_test/run_test_slide.dart';
 import 'package:future_of_flutter_testing/slides/title/title_slide.dart';
@@ -19,6 +21,30 @@ void main() async {
   runApp(
     FlutterDeckApp(
       configuration: const FlutterDeckConfiguration(
+        background: FlutterDeckBackgroundConfiguration(
+          dark: FlutterDeckBackground.gradient(
+            LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Color.fromARGB(255, 4, 43, 89),
+                Color.fromARGB(255, 5, 83, 177),
+              ],
+              stops: <double>[0.8, 1],
+            ),
+          ),
+          light: FlutterDeckBackground.gradient(
+            LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Color.fromARGB(255, 2, 125, 253),
+                Color.fromARGB(255, 5, 83, 177),
+              ],
+              stops: <double>[0.7, 1],
+            ),
+          ),
+        ),
         footer: FlutterDeckFooterConfiguration(
           widget: _CustomFooter(),
         ),
@@ -35,6 +61,8 @@ void main() async {
         WhyTestingTitleSlide(),
         WhyTestingRegressionBugsSlide1(),
         WhyTestingRegressionBugsSlide2(),
+        MatchingSlide(),
+        MatchingExampleSlide(),
         ChecksIntroSlide(),
         ChecksInfosSlide(),
         QuestionsSlide(),
