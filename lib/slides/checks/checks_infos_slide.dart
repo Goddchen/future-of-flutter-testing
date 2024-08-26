@@ -28,7 +28,7 @@ class ChecksInfosSlide extends FlutterDeckSlideWidget {
           items: const <String>[
             'Matching package for tests',
             'Developed by the official Dart team',
-            'Official successor for the matchers package',
+            'Official successor for the matcher package',
             'Type safe and type aware',
             'Compose (and even nest) expectations',
             'Async support',
