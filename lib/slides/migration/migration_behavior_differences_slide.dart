@@ -7,6 +7,9 @@ class MigrationBehaviorDifferencesSlide extends FlutterDeckSlideWidget {
   const MigrationBehaviorDifferencesSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header: FlutterDeckHeaderConfiguration(
+              title: 'Behavior differences',
+            ),
             route: '/checks/migration-behavior-differences',
           ),
         );

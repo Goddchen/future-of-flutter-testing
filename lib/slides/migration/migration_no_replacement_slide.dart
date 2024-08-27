@@ -7,6 +7,9 @@ class MigrationNoReplacementSlide extends FlutterDeckSlideWidget {
   const MigrationNoReplacementSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header: FlutterDeckHeaderConfiguration(
+              title: 'Matchers without replacement',
+            ),
             route: '/checks/migration-no-replacement',
           ),
         );
@@ -18,7 +21,7 @@ class MigrationNoReplacementSlide extends FlutterDeckSlideWidget {
             padding: const EdgeInsets.all(96),
             child: local_bullet_list.FlutterDeckBulletList(
               items: const <String>[
-                'No specific type checks (isArgumentError) -> use isA<T> instead',
+                '''No specific type checks (isArgumentError) -> use isA<T> instead''',
                 '''anything -> when a condition should accept any value, pass (_) {}''',
                 '''Specific numeric comparison (isNegative, isPositive, ...) -> Use isLessThan, isGreaterThan, ...''',
                 '''Range comparisons (inClosedOpenRange, ...) -> Use cascades to chain checks for both ends''',

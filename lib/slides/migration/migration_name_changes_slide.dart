@@ -7,6 +7,7 @@ class MigrationNameChangesSlide extends FlutterDeckSlideWidget {
   const MigrationNameChangesSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header: FlutterDeckHeaderConfiguration(title: 'Naming changes'),
             route: '/checks/migration-name-changes',
           ),
         );

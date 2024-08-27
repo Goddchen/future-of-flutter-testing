@@ -7,6 +7,9 @@ class MigrationMatcherSlide extends FlutterDeckSlideWidget {
   const MigrationMatcherSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header: FlutterDeckHeaderConfiguration(
+              title: 'Migrate from package:matcher',
+            ),
             route: '/migration/matcher',
           ),
         );

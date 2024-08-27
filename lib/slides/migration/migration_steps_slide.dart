@@ -7,6 +7,7 @@ class MigrationStepsSlide extends FlutterDeckSlideWidget {
   const MigrationStepsSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header: FlutterDeckHeaderConfiguration(title: 'Migration steps'),
             route: '/checks/migration-steps',
             steps: 6,
           ),

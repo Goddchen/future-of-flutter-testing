@@ -8,6 +8,7 @@ class MatchingSlide extends FlutterDeckSlideWidget {
   const MatchingSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header: FlutterDeckHeaderConfiguration(title: 'Matching'),
             route: '/matching',
           ),
         );
