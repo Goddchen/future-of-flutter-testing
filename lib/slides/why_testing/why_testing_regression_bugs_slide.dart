@@ -1,5 +1,7 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:future_of_flutter_testing/widgets/bullet_list.dart'
+    as local_bullet_list;
 
 class WhyTestingRegressionBugsSlide1 extends FlutterDeckSlideWidget {
   const WhyTestingRegressionBugsSlide1()
@@ -18,9 +20,10 @@ class WhyTestingRegressionBugsSlide1 extends FlutterDeckSlideWidget {
             style: FlutterDeckTheme.of(context).textTheme.header,
           ),
         ),
-        rightBuilder: (BuildContext context) => FlutterDeckBulletList(
+        rightBuilder: (BuildContext context) =>
+            local_bullet_list.FlutterDeckBulletList(
           items: const <String>[
-            'You fixed a nasty bug - 🏆!',
+            'You fixed a nasty bug 🏆!',
             'Weeks later, you merge some new feature...',
             '... and this old bug reappears 💣',
             'Now you have to start debugging again...',
@@ -49,7 +52,8 @@ class WhyTestingRegressionBugsSlide2 extends FlutterDeckSlideWidget {
             style: FlutterDeckTheme.of(context).textTheme.header,
           ),
         ),
-        rightBuilder: (BuildContext context) => FlutterDeckBulletList(
+        rightBuilder: (BuildContext context) =>
+            local_bullet_list.FlutterDeckBulletList(
           items: const <String>[
             'This is where testing comes to the rescue 🛟',
             'First, write a test to reproduce the bug - the test should fail ❌',
