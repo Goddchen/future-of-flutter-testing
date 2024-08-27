@@ -16,5 +16,6 @@ class MigrationUseNowSlide extends FlutterDeckSlideWidget {
             'package:checks is still in preview.\n'
             'Minor or major changes will happend during the preview period.\n'
             'Once it is stable, yes!',
+        subtitleMaxLines: 4,
       );
 }
