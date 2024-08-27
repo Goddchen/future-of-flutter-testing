@@ -8,6 +8,15 @@ import 'package:future_of_flutter_testing/slides/checks/checks_infos_slide.dart'
 import 'package:future_of_flutter_testing/slides/checks/checks_intro_slide.dart';
 import 'package:future_of_flutter_testing/slides/matching/matching_example_slide.dart';
 import 'package:future_of_flutter_testing/slides/matching/matching_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_all_at_once_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_behavior_differences_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_big_fact_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_have_to_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_matcher_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_name_changes_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_no_replacement_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_steps_slide.dart';
+import 'package:future_of_flutter_testing/slides/migration/migration_use_now_slide.dart';
 import 'package:future_of_flutter_testing/slides/questions/questions_slide.dart';
 import 'package:future_of_flutter_testing/slides/run_test/run_test_slide.dart';
 import 'package:future_of_flutter_testing/slides/title/title_slide.dart';
@@ -67,6 +76,15 @@ void main() async {
         ChecksIntroSlide(),
         ChecksInfosSlide(),
         ChecksExample1Slide(),
+        MigrationBigFactSlide(),
+        MigrationAllAtOnceSlide(),
+        MigrationHaveToSlide(),
+        MigrationUseNowSlide(),
+        MigrationStepsSlide(),
+        MigrationMatcherSlide(),
+        MigrationBehaviorDifferencesSlide(),
+        MigrationNameChangesSlide(),
+        MigrationNoReplacementSlide(),
         QuestionsSlide(),
       ],
     ),
