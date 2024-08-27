@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:future_of_flutter_testing/gen/assets.gen.dart';
 import 'package:future_of_flutter_testing/services/navigation_service.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_advanced_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_composition_big_fact_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_composition_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_example_1_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_extensability_big_fact_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_extensability_slide.dart';
@@ -79,6 +82,9 @@ void main() async {
         ChecksExtensabilitySlide(),
         ChecksIdeIntegrationSlide(),
         ChecksIdeIntegrationScreenshotSlide(),
+        ChecksAdvancedSlide(),
+        ChecksCompositionBigFactSlide(),
+        ChecksCompositionSlide(),
         QuestionsSlide(),
       ],
     ),
