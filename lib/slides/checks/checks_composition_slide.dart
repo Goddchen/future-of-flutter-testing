@@ -1,10 +1,14 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:future_of_flutter_testing/widgets/bullet_list.dart'
+    as local_bullet_list;
 
 class ChecksCompositionSlide extends FlutterDeckSlideWidget {
   const ChecksCompositionSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header:
+                FlutterDeckHeaderConfiguration(title: 'checks - Composition'),
             route: '/checks/composition',
           ),
         );
@@ -35,7 +39,7 @@ extension ComposedChecks on Subject<Iterable> {
 }''',
           ),
         ),
-        rightBuilder: (_) => FlutterDeckBulletList(
+        rightBuilder: (_) => local_bullet_list.FlutterDeckBulletList(
           items: const <String>[
             '''Use the cascade operator to perform multiple checks on the same value''',
             '''Some checks cannot be written as a cascade, use the which(...) utility for those''',

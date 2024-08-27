@@ -6,6 +6,9 @@ class ChecksIdeIntegrationScreenshotSlide extends FlutterDeckSlideWidget {
   const ChecksIdeIntegrationScreenshotSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header: FlutterDeckHeaderConfiguration(
+              title: 'checks - IDE integration',
+            ),
             route: '/checks/ide-integration-screenshot',
           ),
         );

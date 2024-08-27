@@ -9,6 +9,8 @@ import 'package:future_of_flutter_testing/slides/checks/checks_composition_slide
 import 'package:future_of_flutter_testing/slides/checks/checks_example_1_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_extensability_big_fact_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_extensability_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_extract_values_big_fact_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_extract_values_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_ide_integration_screenshot_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_ide_integration_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_infos_slide.dart';
@@ -18,7 +20,6 @@ import 'package:future_of_flutter_testing/slides/checks/checks_type_safety_slide
 import 'package:future_of_flutter_testing/slides/matching/matching_example_slide.dart';
 import 'package:future_of_flutter_testing/slides/matching/matching_slide.dart';
 import 'package:future_of_flutter_testing/slides/questions/questions_slide.dart';
-import 'package:future_of_flutter_testing/slides/run_test/run_test_slide.dart';
 import 'package:future_of_flutter_testing/slides/title/title_slide.dart';
 import 'package:future_of_flutter_testing/slides/why_testing/why_testing_regression_bugs_slide.dart';
 import 'package:future_of_flutter_testing/slides/why_testing/why_testing_title_slide.dart';
@@ -76,7 +77,6 @@ void main() async {
       ),
       slides: const <FlutterDeckSlideWidget>[
         TitleSlide(),
-        RunTestSlide(),
         WhyTestingTitleSlide(),
         WhyTestingRegressionBugsSlide1(),
         WhyTestingRegressionBugsSlide2(),
@@ -94,6 +94,8 @@ void main() async {
         ChecksAdvancedSlide(),
         ChecksCompositionBigFactSlide(),
         ChecksCompositionSlide(),
+        ChecksExtractValuesBigFactSlide(),
+        ChecksExtractValuesSlide(),
         QuestionsSlide(),
       ],
       speakerInfo: FlutterDeckSpeakerInfo(

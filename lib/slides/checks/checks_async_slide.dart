@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:future_of_flutter_testing/widgets/bullet_list.dart'
+    as local_bullet_list;
 
 class ChecksAsyncSlide extends FlutterDeckSlideWidget {
   const ChecksAsyncSlide()
@@ -30,7 +32,7 @@ await check(someQueue).emits((e) => e.equals(2));
 // do something''',
           ),
         ),
-        rightBuilder: (_) => FlutterDeckBulletList(
+        rightBuilder: (_) => local_bullet_list.FlutterDeckBulletList(
           items: const <String>[
             'Checking Futures provides: completes, doesNotComplete, throws',
             '''Checking Streams provides: emits, emitsError, emitThrough, inOrder, anyOf, neverEmits, mayEmit, mayEmitMultiple, isDone, withQueue''',
