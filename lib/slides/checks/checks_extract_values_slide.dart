@@ -29,7 +29,7 @@ check(size).has((size) => size.height, 'height').isGreaterThan(200);''',
               SizedBox(height: 16),
               CodeRunWidget(
                 codeType: CodeType.test,
-                path: 'checks_extract_value_test.dart',
+                path: 'assets/checks_extract_value_test.dart',
               ),
             ],
           ),
