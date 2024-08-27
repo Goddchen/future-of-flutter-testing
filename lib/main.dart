@@ -28,6 +28,11 @@ import 'package:url_launcher/url_launcher.dart';
 
 void main() async {
   GetIt.I.registerSingleton(NavigationService());
+
+  const Color flutterBrandColorDark = Color.fromARGB(255, 4, 43, 89);
+  const Color flutterBrandColorLight = Color.fromARGB(255, 2, 125, 253);
+  const Color flutterBrandColorMedium = Color.fromARGB(255, 5, 83, 177);
+
   runApp(
     FlutterDeckApp(
       configuration: const FlutterDeckConfiguration(
@@ -37,8 +42,8 @@ void main() async {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: <Color>[
-                Color.fromARGB(255, 4, 43, 89),
-                Color.fromARGB(255, 5, 83, 177),
+                flutterBrandColorDark,
+                flutterBrandColorMedium,
               ],
               stops: <double>[0.8, 1],
             ),
@@ -48,8 +53,8 @@ void main() async {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: <Color>[
-                Color.fromARGB(255, 2, 125, 253),
-                Color.fromARGB(255, 5, 83, 177),
+                flutterBrandColorLight,
+                flutterBrandColorMedium,
               ],
               stops: <double>[0.7, 1],
             ),
@@ -59,11 +64,15 @@ void main() async {
           widget: _CustomFooter(),
         ),
       ),
-      speakerInfo: FlutterDeckSpeakerInfo(
-        name: 'Martin "Goddchen" Liersch',
-        description: 'Flutter developer from Germany',
-        socialHandle: '@Goddchen',
-        imagePath: Assets.avatar.path,
+      darkTheme: FlutterDeckThemeData.dark().copyWith(
+        splitSlideTheme: const FlutterDeckSplitSlideThemeData(
+          rightBackgroundColor: flutterBrandColorDark,
+        ),
+      ),
+      lightTheme: FlutterDeckThemeData.light().copyWith(
+        splitSlideTheme: const FlutterDeckSplitSlideThemeData(
+          rightBackgroundColor: flutterBrandColorLight,
+        ),
       ),
       slides: const <FlutterDeckSlideWidget>[
         TitleSlide(),
@@ -87,6 +96,12 @@ void main() async {
         MigrationNoReplacementSlide(),
         QuestionsSlide(),
       ],
+      speakerInfo: FlutterDeckSpeakerInfo(
+        name: 'Martin "Goddchen" Liersch',
+        description: 'Flutter developer from Germany',
+        socialHandle: '@Goddchen',
+        imagePath: Assets.avatar.path,
+      ),
     ),
   );
 }
