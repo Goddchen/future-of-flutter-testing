@@ -7,8 +7,9 @@ class ProcessService {
       TaskEither<Object, String>.tryCatch(
         () async {
           final ProcessResult processResult = await Process.run(
-            'dart',
+            'fvm',
             <String>[
+              'dart',
               path,
             ],
             runInShell: true,
@@ -29,8 +30,9 @@ class ProcessService {
       TaskEither<Object, String>.tryCatch(
         () async {
           final ProcessResult processResult = await Process.run(
-            'dart',
+            'fvm',
             <String>[
+              'flutter',
               'test',
               path,
             ],

@@ -21,19 +21,12 @@ class ChecksExample1Slide extends FlutterDeckSlideWidget {
               child: Center(
                 child: FlutterDeckCodeHighlight(
                   code: '''
-void main() {
-  test('sample test', () {
-    // test code here
-    ...
-
-    expect(actual, equals(expected));
-    expect(someList, isNotEmpty());
-    expect(someObject, isA<Map>());
-    expect(someString, startsWith('a'));
-    expect(someString, endsWith('z'));
-    expect(someString, contains('lmno'));
-  });
-}''',
+expect(actual, equals(expected));
+expect(someList, isNotEmpty());
+expect(someObject, isA<Map>());
+expect(someString, startsWith('a'));
+expect(someString, endsWith('z'));
+expect(someString, contains('lmno'));''',
                 ),
               ),
             ),
@@ -49,20 +42,13 @@ void main() {
               child: Center(
                 child: FlutterDeckCodeHighlight(
                   code: '''
-void main() {
-  test('sample test', () {
-    // test code here
-    ...
-
-    check(actual).equals(expected);
-    check(someList).isNotEmpty();
-    check(someObject).isA<Map>();
-    check(someString)
-      ..startsWith('a')
-      ..endsWith('z')
-      ..contains('lmno');
-  });
-}''',
+check(actual).equals(expected);
+check(someList).isNotEmpty();
+check(someObject).isA<Map>();
+check(someString)
+  ..startsWith('a')
+  ..endsWith('z')
+  ..contains('lmno');''',
                 ),
               ),
             ),
