@@ -18,20 +18,22 @@ class ChecksExtractValuesSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.split(
         leftBuilder: (_) => const Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              FlutterDeckCodeHighlight(
-                code: '''
-const Size size = Size(100, 100);
-check(size).has((size) => size.height, 'height').isGreaterThan(200);''',
-              ),
-              SizedBox(height: 16),
-              CodeRunWidget(
-                codeType: CodeType.test,
-                path: 'assets/checks_extract_value_test.dart',
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                FlutterDeckCodeHighlight(
+                  code: '''
+          const Size size = Size(100, 100);
+          check(size).has((size) => size.height, 'height').isGreaterThan(200);''',
+                ),
+                SizedBox(height: 16),
+                CodeRunWidget(
+                  codeType: CodeType.test,
+                  path: 'assets/checks_extract_value_test.dart',
+                ),
+              ],
+            ),
           ),
         ),
         rightBuilder: (_) => local_bullet_list.FlutterDeckBulletList(
