@@ -1,15 +1,16 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:future_of_flutter_testing/widgets/bullet_list.dart'
     as local_bullet_list;
 
-class MatchingSlide extends FlutterDeckSlideWidget {
-  const MatchingSlide()
+class MigrationBehaviorDifferencesSlide extends FlutterDeckSlideWidget {
+  const MigrationBehaviorDifferencesSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
-            header: FlutterDeckHeaderConfiguration(title: 'Matching'),
-            route: '/matching',
+            header: FlutterDeckHeaderConfiguration(
+              title: 'Behavior differences',
+            ),
+            route: '/checks/migration-behavior-differences',
           ),
         );
 
@@ -20,11 +21,8 @@ class MatchingSlide extends FlutterDeckSlideWidget {
             padding: const EdgeInsets.all(96),
             child: local_bullet_list.FlutterDeckBulletList(
               items: const <String>[
-                '''During tests, you want verify that data satisfies certain criteria.''',
-                'This is called matching.',
-                'The test package provides the expect(...) method for this.',
-                '''The matcher package provides matchers used with expect(...).''',
-                '''equals(...), contains(...), hasLength(...), greaterThan(...), isA<T>(), ...''',
+                '''equals matcher performed a deep equals on iterables. Now you need to call deepEquals.''',
+                'Streams must now be wrapped in StreamQueue',
               ],
             ),
           ),

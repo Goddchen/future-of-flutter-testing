@@ -5,6 +5,7 @@ class MatchingExampleSlide extends FlutterDeckSlideWidget {
   const MatchingExampleSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
+            header: FlutterDeckHeaderConfiguration(title: 'Matching'),
             route: '/matching/example',
           ),
         );
