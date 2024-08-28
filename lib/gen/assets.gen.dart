@@ -12,19 +12,29 @@ import 'package:flutter/widgets.dart';
 class Assets {
   Assets._();
 
+  static const AssetGenImage autoComplete =
+      AssetGenImage('assets/auto-complete.png');
   static const AssetGenImage avatar = AssetGenImage('assets/avatar.jpeg');
   static const AssetGenImage dashQuestions =
       AssetGenImage('assets/dash-questions.png');
   static const String runTest = 'assets/run_test.dart';
 
   /// List of all assets
-  List<dynamic> get values => [avatar, dashQuestions, runTest];
+  static List<dynamic> get values =>
+      [autoComplete, avatar, dashQuestions, runTest];
 }
 
 class AssetGenImage {
-  const AssetGenImage(this._assetName);
+  const AssetGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  });
 
   final String _assetName;
+
+  final Size? size;
+  final Set<String> flavors;
 
   Image image({
     Key? key,

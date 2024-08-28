@@ -8,7 +8,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           cache: true
-          flutter-version: "3.22.3"
+          flutter-version: "3.24.1"
       - run: flutter build web
       - run: cp -r build/web/assets/packages build/web/packages
       - run: cp -r build/web/assets/assets/* build/web/assets
@@ -21,7 +21,7 @@ jobs:
   flutter_package:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     with:
-      flutter_version: "3.22.3"
+      flutter_version: "3.24.1"
       min_coverage: 0
       runs_on: "ubuntu-22.04"
   semantic_pull_request:

@@ -62,7 +62,7 @@ class CodeRunWidget extends StatelessWidget {
                   color: FlutterDeckTheme.of(context)
                       .materialTheme
                       .colorScheme
-                      .onPrimary,
+                      .primary,
                 );
               case final AsyncValueError<String> error:
                 return Text(

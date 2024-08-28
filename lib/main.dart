@@ -3,9 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:future_of_flutter_testing/gen/assets.gen.dart';
 import 'package:future_of_flutter_testing/services/navigation_service.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_advanced_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_composition_big_fact_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_composition_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_example_1_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_extensability_big_fact_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_extensability_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_extract_values_big_fact_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_extract_values_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_ide_integration_screenshot_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_ide_integration_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_infos_slide.dart';
 import 'package:future_of_flutter_testing/slides/checks/checks_intro_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_type_safety_big_fact_slide.dart';
+import 'package:future_of_flutter_testing/slides/checks/checks_type_safety_slide.dart';
 import 'package:future_of_flutter_testing/slides/matching/matching_example_slide.dart';
 import 'package:future_of_flutter_testing/slides/matching/matching_slide.dart';
 import 'package:future_of_flutter_testing/slides/migration/migration_all_at_once_slide.dart';
@@ -18,7 +29,6 @@ import 'package:future_of_flutter_testing/slides/migration/migration_no_replacem
 import 'package:future_of_flutter_testing/slides/migration/migration_steps_slide.dart';
 import 'package:future_of_flutter_testing/slides/migration/migration_use_now_slide.dart';
 import 'package:future_of_flutter_testing/slides/questions/questions_slide.dart';
-import 'package:future_of_flutter_testing/slides/run_test/run_test_slide.dart';
 import 'package:future_of_flutter_testing/slides/title/title_slide.dart';
 import 'package:future_of_flutter_testing/slides/why_testing/why_testing_regression_bugs_slide.dart';
 import 'package:future_of_flutter_testing/slides/why_testing/why_testing_title_slide.dart';
@@ -76,7 +86,6 @@ void main() async {
       ),
       slides: const <FlutterDeckSlideWidget>[
         TitleSlide(),
-        RunTestSlide(),
         WhyTestingTitleSlide(),
         WhyTestingRegressionBugsSlide1(),
         WhyTestingRegressionBugsSlide2(),
@@ -85,6 +94,17 @@ void main() async {
         ChecksIntroSlide(),
         ChecksInfosSlide(),
         ChecksExample1Slide(),
+        ChecksTypeSafetyBigFactSlide(),
+        ChecksTypeSafetySlide(),
+        ChecksExtensabilityBigFactSlide(),
+        ChecksExtensabilitySlide(),
+        ChecksIdeIntegrationSlide(),
+        ChecksIdeIntegrationScreenshotSlide(),
+        ChecksAdvancedSlide(),
+        ChecksCompositionBigFactSlide(),
+        ChecksCompositionSlide(),
+        ChecksExtractValuesBigFactSlide(),
+        ChecksExtractValuesSlide(),
         MigrationBigFactSlide(),
         MigrationAllAtOnceSlide(),
         MigrationHaveToSlide(),
