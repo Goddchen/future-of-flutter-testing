@@ -72,6 +72,7 @@ class PackageBadge extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
+                const SizedBox(height: 8),
                 Wrap(
                   alignment: WrapAlignment.center,
                   children: _supportedPlatforms
