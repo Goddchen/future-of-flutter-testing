@@ -29,6 +29,9 @@ import 'package:future_of_flutter_testing/slides/migration/migration_no_replacem
 import 'package:future_of_flutter_testing/slides/migration/migration_steps_slide.dart';
 import 'package:future_of_flutter_testing/slides/migration/migration_use_now_slide.dart';
 import 'package:future_of_flutter_testing/slides/questions/questions_slide.dart';
+import 'package:future_of_flutter_testing/slides/spec/spec_infos_slide.dart';
+import 'package:future_of_flutter_testing/slides/spec/spec_intro_slide.dart';
+import 'package:future_of_flutter_testing/slides/spec/spec_package_example_slide.dart';
 import 'package:future_of_flutter_testing/slides/title/title_slide.dart';
 import 'package:future_of_flutter_testing/slides/why_testing/why_testing_regression_bugs_slide.dart';
 import 'package:future_of_flutter_testing/slides/why_testing/why_testing_title_slide.dart';
@@ -114,6 +117,9 @@ void main() async {
         MigrationBehaviorDifferencesSlide(),
         MigrationNameChangesSlide(),
         MigrationNoReplacementSlide(),
+        SpecIntroSlide(),
+        SpecInfosSlide(),
+        SpecPackageExampleSlide(),
         QuestionsSlide(),
       ],
       speakerInfo: FlutterDeckSpeakerInfo(
