@@ -27,6 +27,18 @@ test('dart test example', () async {
   // With spec - type safe
   expect(value).toEqual(42);
   await expect(Future.value(42)).completion.toEqual(42);
+
+  // Futures
+  final future = Future.value(42);
+  await expect(future).completion.toEqual(42);
+  await expect(future).throws.isArgumentError();
+
+  // Numbers
+  expect(42).toEqual(42);
+  expect(42).lessThan(43);
+
+  // Strings
+  expect('hello').equalsIgnoringCase('HELLO');
 });''',
           ),
         ),
